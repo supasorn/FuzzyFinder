@@ -739,8 +739,11 @@ function s:deactivateFufBuffer()
   endif
   call l9#tempbuffer#close(s:FUF_BUF_NAME)
   exec s:fuf_buffer_last_winnr . "wincmd w"
-  if exists("g:fuzzy_post_command")
-    exec g:fuzzy_post_command
+  if exists("g:fuzzy_post_command1")
+    exec g:fuzzy_post_command1
+  endif
+  if exists("g:fuzzy_post_command2")
+    exec g:fuzzy_post_command2
   endif
 
 endfunction
